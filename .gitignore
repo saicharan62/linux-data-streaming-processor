@@ -1,3 +1,5 @@
+processor
+output.txt
 build/
 *.out
 *.o

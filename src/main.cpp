@@ -58,7 +58,7 @@ int main(int argc, char* argv[]){
         return 1;
     }
 
-    ofstream log("output.txt");
+    ofstream logFile("output.txt");
 
     int value;
     CircularBuffer cb;
@@ -67,11 +67,11 @@ int main(int argc, char* argv[]){
         cb.add(value);
 
         if(value < 0){
-            log << "Invalid data: " << value << endl;
+            logFile << "Invalid data: " << value << endl;
         }
         if(value > threshold){
             cout << "ALERT: " << value << endl;
-            log << "ALERT: " << value << endl;    
+            logFile << "ALERT: " << value << endl;    
         }
     }
     cb.display();
